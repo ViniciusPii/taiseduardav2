@@ -6,13 +6,10 @@ body, h1, h2, h3, p, ul {
     font-weight: normal;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Bahnschrift Light, sans-serif;
     color: #8d8d8d;
+    font-size: 16px;
 }
 
 * {
@@ -43,7 +40,6 @@ ul {
 .header {
     width: 100%;
     background: #252525;
-    position: fixed;
 }
 
 .topo {
@@ -115,7 +111,7 @@ ul {
     background: url('../img/flor.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    padding: 60px 0;
+    padding: 60px 0 200px 0;
 }
 
 .sobre-foto {
@@ -159,4 +155,137 @@ ul {
 .sobre-descricao p {
     font-size: 1.5625em;
     margin-top: 40px;
+}
+
+/* portfolio */
+
+.portifolio-img img {
+    display: block;
+    float: left;
+    width: 33%;
+}
+
+.portifolio-img img:hover {
+    opacity: 0.8;
+}
+
+.portfolio-descricao {
+    clear: both;
+    background: url('../img/l4.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.portfolio-descricao-interno {
+    flex-direction: column;
+    padding: 400px 0 100px 20px;
+}
+
+.portfolio-descricao-interno h1 {
+    font-size: 3.125em;
+    text-transform: capitalize;
+}
+
+.portfolio-descricao-interno h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #8d8d8d;
+    margin-bottom: 60px;
+}
+
+.portfolio-descricao-interno p {
+    width: 500px;
+    font-size: 1.5625em;
+}
+
+/* contato */
+
+#contato {
+    padding: 100px 0 200px 0;
+    background: url('../img/flor.jpg') no-repeat top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contato-form h1 {
+    font-size: 3.125em;
+}
+
+.contato-form h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #8d8d8d;
+    margin-bottom: 40px;
+}
+
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-form input {
+    font-family: Bahnschrift Light, sans-serif;
+    padding: 10px;
+    background: transparent;
+    margin: 5px 0;
+    border: 3px solid #8d8d8d;
+    outline: none;
+    color: #8d8d8d;
+    font-size: 1.1em;
+}
+
+.contato-form textarea {
+    font-family: Bahnschrift Light, sans-serif;
+    padding: 10px;
+    background: transparent;
+    border: 3px solid #8d8d8d;
+    outline: none;
+    color: #8d8d8d;
+    font-size: 1.1em;
+    resize: none;
+}
+
+.contato-form button {
+    padding: 10px 0;
+    margin-top: 20px;
+    background: #8d8d8d;
+    border: 3px solid #8d8d8d;
+    font-size: 1.1em;
+    color: #252525;
+    cursor: pointer;
+    outline: none;
+}
+
+.contato-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.contato-cont p {
+    margin: 10px 0;
+}
+
+/* footer */
+
+.footer {
+    padding: 50px 0;
+    text-align: center;
+    background: #252525;
+}
+
+.footer h2 {
+    font-size: 2.5em;
+    padding: 10px 0 20px 0;
+}
+
+.footer a {
+    font-size: 1.5em;
+    padding: 10px;
+    color: #8d8d8d;
 }
