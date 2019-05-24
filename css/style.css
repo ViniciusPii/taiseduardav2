@@ -6,6 +6,10 @@ body, h1, h2, h3, p, ul {
     font-weight: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Bahnschrift Light, sans-serif;
     color: #8d8d8d;
@@ -29,23 +33,24 @@ ul {
     max-width: 1080px;
 }
 
+.flex {
+    flex: 1;
+    margin: 0 20px;
+}
+
 /* topo */
 
 .header {
+    width: 100%;
     background: #252525;
+    position: fixed;
 }
 
 .topo {
     padding: 10px 0;
 }
 
-.topo-logo {
-    flex: 1;
-    margin-left: 20px;
-}
-
 .topo-nav {
-    flex: 1;
     align-self: center;
 }
 
@@ -68,7 +73,7 @@ ul {
 
 /* introducao */
 
-.introducao {
+#home {
     background: url('../img/flor.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
@@ -81,25 +86,77 @@ ul {
     letter-spacing: 2.5vw;
 }
 
-.introducao-logo {
+.home-logo {
     font-size: 3.75em;
     margin-bottom: 40px;
 }
 
-.introducao h1 {
+#home h1 {
     font-size: 3.75em;
     padding-bottom: 15px;
 }
 
-.introducao h2 {
+#home h2 {
     font-size: 1.875em;
 }
 
-.introducao h2::after {
+#home h2::after {
     content: '';
     display: block;
     width: 200px;
     height: 3px;
     background: #8d8d8d;
     margin: 40px auto;
+}
+
+/* sobre */
+
+#sobre {
+    background: url('../img/flor.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 60px 0;
+}
+
+.sobre-foto {
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre-foto img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 5px solid #8d8d8d;
+}
+
+.sobre-icones {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-size: 1.875em;
+}
+
+.sobre-icones a {
+    cursor: pointer;
+}
+
+.sobre-descricao h1 {
+    font-size: 3.75em;
+    text-transform: capitalize;
+}
+
+.sobre-descricao h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #8d8d8d;
+    margin-bottom: 60px;
+}
+
+.sobre-descricao p {
+    font-size: 1.5625em;
+    margin-top: 40px;
 }
