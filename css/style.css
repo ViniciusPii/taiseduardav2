@@ -3,6 +3,7 @@
 body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
+    font-weight: normal;
 }
 
 body {
@@ -55,7 +56,7 @@ ul {
 
 .topo-nav a {
     color: #8d8d8d;
-    padding: 60px 20px;
+    padding: 52px 20px 60px 20px;
     text-transform: uppercase;
     font-size: 1.125em;
 }
@@ -63,4 +64,42 @@ ul {
 .topo-nav a:hover {
     background: #8d8d8d;
     color: #252525;
+}
+
+/* introducao */
+
+.introducao {
+    background: url('../img/flor.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 2.5vw;
+}
+
+.introducao-logo {
+    font-size: 3.75em;
+    margin-bottom: 40px;
+}
+
+.introducao h1 {
+    font-size: 3.75em;
+    padding-bottom: 15px;
+}
+
+.introducao h2 {
+    font-size: 1.875em;
+}
+
+.introducao h2::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 3px;
+    background: #8d8d8d;
+    margin: 40px auto;
 }
