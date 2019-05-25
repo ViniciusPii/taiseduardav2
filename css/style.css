@@ -40,6 +40,9 @@ ul {
 .header {
     width: 100%;
     background: #252525;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 .topo {
@@ -70,16 +73,17 @@ ul {
 /* introducao */
 
 #home {
+    margin-top: 121px;
     background: url('../img/flor.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
     letter-spacing: 2.5vw;
+    height: 100vh;
 }
 
 .home-logo {
@@ -162,7 +166,7 @@ ul {
 .portifolio-img img {
     display: block;
     float: left;
-    width: 33%;
+    width: 33.333%;
 }
 
 .portifolio-img img:hover {
@@ -288,4 +292,80 @@ ul {
     font-size: 1.5em;
     padding: 10px;
     color: #8d8d8d;
+}
+
+/* responsivo */
+
+@media only screen and (max-width: 769px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* menu */
+
+@media only screen and (max-width: 769px) {
+    .topo-logo {
+        display: none;
+    }
+    .topo-nav a:hover {
+        background: none;
+        color: #8d8d8d;
+    }
+}
+
+/* intro */
+
+@media only screen and (max-width: 769px) {
+    #home {
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
+/* sobre */
+
+@media only screen and (max-width: 769px) {
+    .sobre-foto {
+        padding-bottom: 60px;
+    }
+    .sobre-descricao h1::after {
+        margin: 0 auto;
+    }
+}
+
+/* portfolio */
+
+@media only screen and (max-width: 769px) {
+    .portifolio-img img {
+        width: 100%;
+    }
+    .not {
+        display: none;
+    }
+    .portfolio-descricao-interno h1::after {
+        margin: 10px auto 20px auto;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .portfolio-descricao-interno p {
+        max-width: 300px;
+    }
+}
+
+/* contato */
+
+@media only screen and (max-width: 769px) {
+    .contato-form {
+        padding-bottom: 60px;
+    }
+    .contato-form h1::after {
+        margin: 10px auto 20px auto;
+    }
+    .contato-cont {
+        max-width: 450px;
+    }
 }
