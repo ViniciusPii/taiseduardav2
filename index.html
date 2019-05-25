@@ -18,20 +18,39 @@
 <body>
 
     <header class="header">
-        <div class="topo container">
+        <div class="topo container desk">
             <div class="topo-logo flex">
                 <img src="img/logo para fundo escuro.png" alt="Tais Eduarda Fotografia" width="150">
             </div>
             <nav class="topo-nav flex">
                 <ul>
-                    <li><a href="#home">home</a></li>
+                    <li class="active" ><a href="#home">home</a></li>
                     <li><a href="#sobre">sobre</a></li>
                     <li><a href="#portfolio">portfólio</a></li>
                     <li><a href="#contato">contato</a></li>
                 </ul>
             </nav>
         </div>
+        <div class="topo container mobile">
+            <div class="topo-logo flex">
+                <i class="fas fa-camera camera"></i>
+            </div>
+            <div class="topo-bars flex">
+                <i class="fas fa-bars barra" onclick="ocultarExibir()"></i>
+            </div>
+        </div>
     </header><!-- final do header -->
+
+    <div id="modal-menu">
+        <nav id="modal-menu-nav">
+            <ul>
+                <li><a href="#home" onclick="ocultar()">home</a></li>
+                <li><a href="#sobre" onclick="ocultar()">sobre</a></li>
+                <li><a href="#portfolio" onclick="ocultar()">portfólio</a></li>
+                <li><a href="#contato" onclick="ocultar()">contato</a></li>
+            </ul>
+        </nav>
+    </div><!-- final do modal responsivo -->
 
     <main id="home">
         <div class="home-logo">
@@ -41,7 +60,7 @@
         <h2>fotografia</h2>
     </main><!-- final da introducao -->
 
-    <section id="sobre">
+    <section id="sobre" class="scrollspy">
         <div class="sobre-interna container">
             <div class="sobre-foto flex">
                 <img src="img/foto.jpg" alt="Tais Eduarda">

@@ -4,6 +4,7 @@ body, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    list-style-type: none;
 }
 
 body {
@@ -20,10 +21,6 @@ a {
     text-decoration: none;
 }
 
-ul {
-    list-style: none;
-}
-
 .container {
     display: flex;
     margin: 0 auto;
@@ -32,7 +29,7 @@ ul {
 
 .flex {
     flex: 1;
-    margin: 0 20px;
+    margin: 0 60px;
 }
 
 /* topo */
@@ -70,10 +67,22 @@ ul {
     color: #252525;
 }
 
+.mobile {
+    display: none;
+}
+
+.modal-menu {
+    display: none;
+}
+
+.topo-nav .active a{
+    background: #8d8d8d;
+    color: #252525;
+}
+
 /* introducao */
 
 #home {
-    margin-top: 121px;
     background: url('../img/flor.jpg') no-repeat center;
     background-size: cover;
     background-attachment: fixed;
@@ -121,6 +130,7 @@ ul {
 .sobre-foto {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .sobre-foto img {
@@ -182,7 +192,7 @@ ul {
 
 .portfolio-descricao-interno {
     flex-direction: column;
-    padding: 400px 0 100px 20px;
+    padding: 400px 0 100px 60px;
 }
 
 .portfolio-descricao-interno h1 {
@@ -307,65 +317,89 @@ ul {
 /* menu */
 
 @media only screen and (max-width: 769px) {
-    .topo-logo {
+    .desk {
         display: none;
     }
-    .topo-nav a:hover {
-        background: none;
+    .mobile {
+        display: flex;
+    }
+    .topo {
+        width: 100%;
+        flex-direction: row;
+    }
+    .topo-logo {
+        font-size: 1.875em;
+        display: flex;
+    }
+    .topo-bars {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 1.875em;
+    }
+    #modal-menu {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #252525;
+        opacity: 0.96;
+        margin-top: 50px
+    }
+    #modal-menu-nav {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #modal-menu-nav a {
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        line-height: 100px;
         color: #8d8d8d;
     }
-}
-
-/* intro */
-
-@media only screen and (max-width: 769px) {
-    #home {
-        margin-top: 0;
-        text-align: center;
+    /* intro */
+    @media only screen and (max-width: 769px) {
+        #home {
+            margin-top: 0;
+            text-align: center;
+        }
     }
-}
-
-/* sobre */
-
-@media only screen and (max-width: 769px) {
-    .sobre-foto {
-        padding-bottom: 60px;
+    /* sobre */
+    @media only screen and (max-width: 769px) {
+        .sobre-foto {
+            padding-bottom: 60px;
+        }
+        .sobre-descricao h1::after {
+            margin: 0 auto;
+        }
     }
-    .sobre-descricao h1::after {
-        margin: 0 auto;
+    /* portfolio */
+    @media only screen and (max-width: 769px) {
+        .portifolio-img img {
+            width: 100%;
+        }
+        .not {
+            display: none;
+        }
+        .portfolio-descricao-interno h1::after {
+            margin: 10px auto 20px auto;
+        }
     }
-}
-
-/* portfolio */
-
-@media only screen and (max-width: 769px) {
-    .portifolio-img img {
-        width: 100%;
+    @media only screen and (max-width: 560px) {
+        .portfolio-descricao-interno p {
+            max-width: 300px;
+        }
     }
-    .not {
-        display: none;
-    }
-    .portfolio-descricao-interno h1::after {
-        margin: 10px auto 20px auto;
-    }
-}
-
-@media only screen and (max-width: 560px) {
-    .portfolio-descricao-interno p {
-        max-width: 300px;
-    }
-}
-
-/* contato */
-
-@media only screen and (max-width: 769px) {
-    .contato-form {
-        padding-bottom: 60px;
-    }
-    .contato-form h1::after {
-        margin: 10px auto 20px auto;
-    }
-    .contato-cont {
-        max-width: 450px;
-    }
-}
+    /* contato */
+    @media only screen and (max-width: 769px) {
+        .contato-form {
+            padding-bottom: 60px;
+        }
+        .contato-form h1::after {
+            margin: 10px auto 20px auto;
+        }
+        .contato-cont {
+            max-width: 450px;
+        }
+    }}
