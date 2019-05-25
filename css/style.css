@@ -369,6 +369,10 @@ a {
     }
     /* sobre */
     @media only screen and (max-width: 769px) {
+        #sobre {
+            background-position: left;
+            background-attachment: scroll;
+        }
         .sobre-foto {
             padding-bottom: 60px;
         }
@@ -384,6 +388,9 @@ a {
         .not {
             display: none;
         }
+        .portfolio-descricao-interno {
+            padding: 200px 0px 100px 20px;
+        }
         .portfolio-descricao-interno h1::after {
             margin: 10px auto 20px auto;
         }
@@ -395,6 +402,10 @@ a {
     }
     /* contato */
     @media only screen and (max-width: 769px) {
+        #contato {
+            background-attachment: scroll;
+            background-position: left;
+        }
         .contato-form {
             padding-bottom: 60px;
         }
